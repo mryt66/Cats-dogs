@@ -1,8 +1,20 @@
 import wave
 import numpy
+import os, glob
+import librosa
 
-#reading from file
-path=r'C:\Users\Marcin\Desktop\Projekty\SSI_cat_dog\archive\cats_dogs\train\cat\cat_1.wav'
+
+wav_files=[]
+path=r"C:\Users\Marcin\Desktop\Projekty\SSI_cat_dog\archive\cats_dogs\train\cat\cat_1.wav"
+# for file in glob.glob(path2):
+#   print(file)
+
+y, sr = librosa.load(path)
+print(y)
+# filenames = next(os.walk(path2))[2]
+# print(filenames)
+
+
 ifile= wave.open(path)
 samples=ifile.getnframes()
 audio=ifile.readframes(samples)
@@ -14,5 +26,4 @@ audio_float=audio_int.astype(numpy.float32)
 #Normalization float to -1.0 : +1.0 range
 maxint=2**15
 audio_normalised=audio_float/maxint
-for i in audio_normalised:
-    print(i)
+print(audio_normalised)
