@@ -3,6 +3,7 @@ import librosa
 
 wav_files=[]
 
+#zapis 10 znormalziwoanych danych kotów do pliku csv 
 with open('Data_cats_10.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     for file in range(1,10):
