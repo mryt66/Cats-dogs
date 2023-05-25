@@ -17,7 +17,7 @@ class dog_cat:
         path=f'{self.type}_1-00{self.number}.wav'
         self.audio_data, self.fs = sf.read(path)
         
-    def create_data(self):
+    def create_data(self, path):
         if self.audio_data is None:
             raise ValueError("Brak danych")
 
@@ -38,7 +38,7 @@ class dog_cat:
             target_amplitudes=np.append(target_amplitudes,amplitudes[i][0])
 
         df=pd.DataFrame({'Amplitudes': [target_amplitudes]})
-        with open('Data_cats_10.csv', 'a') as file:
+        with open(path, 'a') as file:
             file.write(df.to_string(header=False, index=False))
             file.write('\n')
     
