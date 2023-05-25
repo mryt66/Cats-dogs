@@ -5,7 +5,6 @@ import csv
 from sklearn.model_selection import train_test_split
 from scipy.io import wavfile
 
-
 class dog_cat:
     
     def __init__(self, type, number):
@@ -27,12 +26,10 @@ class dog_cat:
         
         divide_number=1000
         multiplier=len(amplitudes)/divide_number
-
         dt = 1/self.fs
 
         freqs = np.fft.fftfreq(len(fft), dt)
         bands = np.array_split(np.arange(len(freqs)), divide_number) 
-
         mean_amplitude = [np.mean(amplitudes[band]) for band in bands] 
         sorted_indices = np.argsort(mean_amplitude)[::-1]
 
@@ -46,30 +43,31 @@ class dog_cat:
             file.write('\n')
     
     
-# Stworzenie zbioru treningowego dla kotów
+# To niżej do wywalenia chyba   
+ 
 # for iterator in range(1,9):
 #     thing=dog_cat('cat',iterator)
 #     thing.read_data()
 #     thing.create_data()
 
-data_cats=[]
-with open('Data_cats_10.csv', 'r', newline='') as file:
-    reader=csv.reader(file, quoting=csv.QUOTE_NONE)
-    for i in reader:
-        tmp=[]
-        for j in i:
-            if j[0]=='[':
-                j=j.strip('[')
-            elif j[len(j)-1]==']':
-                j=j.strip(']')
-            tmp.append(j)
-        data_cats.append(tmp)
-for i in data_cats:
-    print(i)
+# data_cats=[]
+# with open('Data_cats_10.csv', 'r', newline='') as file:
+#     reader=csv.reader(file, quoting=csv.QUOTE_NONE)
+#     for i in reader:
+#         tmp=[]
+#         for j in i:
+#             if j[0]=='[':
+#                 j=j.strip('[')
+#             elif j[len(j)-1]==']':
+#                 j=j.strip(']')
+#             tmp.append(j)
+#         data_cats.append(tmp)
+# for i in data_cats:
+#     print(i)
+
 
 
 #co zrobić !!!
 #dorobić zabezpieczenie, żeby nie było dwóch tych samych linijek w .csv     
-#dorobić tak, żeby otwierać wszystkie pliki w klasie a nastepnie zapisywać całość data setu
     
     
