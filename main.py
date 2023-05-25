@@ -6,13 +6,22 @@ from sklearn.model_selection import train_test_split
 from scipy.io import wavfile
 from csv_creator.py import dog_cat
 
-for iterator in range(1,9):
+csv_cats='Data_cats.csv'
+csv_dogs='Data_dogs.csv'
+
+for iterator in range(10,26):
     thing=dog_cat('cat',iterator)
     thing.read_data()
-    thing.create_data()
+    thing.create_data('Data_cats.csv')
+    
+    thing=dog_cat('dog_barking',iterator)
+    thing.read_data()
+    thing.create_data('Data_dogs.csv')
+
+    
 
 data_cats=[]
-with open('Data_cats_10.csv', 'r', newline='') as file:
+with open(csv_cats, 'r', newline='') as file:
     reader=csv.reader(file, quoting=csv.QUOTE_NONE)
     for i in reader:
         tmp=[]
