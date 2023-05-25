@@ -4,6 +4,12 @@ import soundfile as sf
 import csv
 from sklearn.model_selection import train_test_split
 from scipy.io import wavfile
+from csv_creator.py import dog_cat
+
+for iterator in range(1,9):
+    thing=dog_cat('cat',iterator)
+    thing.read_data()
+    thing.create_data()
 
 data_cats=[]
 with open('Data_cats_10.csv', 'r', newline='') as file:
