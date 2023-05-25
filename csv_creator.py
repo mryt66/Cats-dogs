@@ -7,17 +7,18 @@ from scipy.io import wavfile
 
 class dog_cat:
     
-    def __init__(self, type, number):
+    def __init__(self, type, number, path):
         self.type=type
         self.number=number
         self.audio_data=None
         self.fs=None
+        self.path=path
         
     def read_data(self):
-        path=f'{self.type}_{self.number}.wav'
+        path=f'only_once_miau_and_hał_data/{self.type}_{self.number}.wav'
         self.audio_data, self.fs = sf.read(path)
         
-    def create_data(self, path):
+    def create_data(self):
         if self.audio_data is None:
             raise ValueError("Brak danych")
 
@@ -36,19 +37,19 @@ class dog_cat:
         target_amplitudes=np.array([])
         for i in bands[sorted_indices[0]]:
             target_amplitudes=np.append(target_amplitudes,amplitudes[i][0])
-
         df=pd.DataFrame({'Amplitudes': [target_amplitudes]})
-        with open(path, 'a') as file:
+        with open(self.path, 'a') as file:
             file.write(df.to_string(header=False, index=False))
             file.write('\n')
     
-    
-# To niżej do wywalenia chyba   
- 
-# for iterator in range(1,9):
-#     thing=dog_cat('cat',iterator)
+   
+# for iterator in range(11,25):
+#     thing=dog_cat('cat',iterator, 'Data_cats.csv')
 #     thing.read_data()
 #     thing.create_data()
+
+
+
 
 # data_cats=[]
 # with open('Data_cats_10.csv', 'r', newline='') as file:
