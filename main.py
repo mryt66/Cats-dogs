@@ -5,16 +5,17 @@ import pandas as pd
 import soundfile as sf
 import random
 import csv
+from statistics import mean
 from scipy.io import wavfile
 from csv_creator import dog_cat
 
 for iterator in range(10,26):
-    thing=dog_cat('cat',iterator,'Data_cats.csv')
-    thing.read_data()
+    thing=dog_cat('cat', iterator, 'Data_cats.csv')
+    thing.read_wave()
     thing.create_data()
     
-    thing=dog_cat('dog_barking',iterator,'Data_dogs.csv')
-    thing.read_data()
+    thing=dog_cat('dog_barking', iterator, 'Data_dogs.csv')
+    thing.read_wave()
     thing.create_data()
 
 data=[]
@@ -68,5 +69,7 @@ train,val=x.split()
 k=3
 print(train)
 
+
+    
 
     
