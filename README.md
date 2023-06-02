@@ -4,7 +4,7 @@ csv_creator.py fills data_cats and data_dogs with converted to floats data, ever
 Lines doesn't have this same length because of different frequency. (more float numbers in line = bigger frequency)
 
 
-!NOT DONE!
 
-Data included in short_dataset
+
+Data included in cats&dogs .wav, cut and based on:
 https://www.kaggle.com/code/gauravduttakiit/yamnet-audio-cats-and-dogs
