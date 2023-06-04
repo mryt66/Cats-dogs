@@ -5,11 +5,12 @@ Lines doesn't have this same length because of different frequency. (more float 
 
 Mews and barks are simplified to one sound by us. Example of this one sound can be presented on this graph:
 <p align="center">
-  <img src="https://github.com/mryt66/cats-dogs-classifier/assets/64143856/81e3d9fe-8406-4f06-aee2-d54189bf52b0" />
+  <img src="https://github.com/mryt66/cats-dogs-classifier/assets/64143856/81e3d9fe-8406-4f06-aee2-d54189bf52b0" alt="Spectrum plot" />
 </p>
 
-An example how does classifier prepare the data
-![screen3](https://github.com/mryt66/cats-dogs-classifier/assets/64143856/9847169e-ab30-426d-aacf-7c2f469c9ba3)
+<p align="center">
+  <img src="https://github.com/mryt66/cats-dogs-classifier/assets/64143856/9847169e-ab30-426d-aacf-7c2f469c9ba3" alt="An example how does classifier prepare data" />
+</p>
 
 With 25 different records for each dog and cat our classifier had around 90% accuracy
 
