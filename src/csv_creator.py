@@ -14,7 +14,7 @@ class DogCat:
         self.path = path
 
     def read_wave(self):
-        path=f'cats&dogs .wav/{self.type}_{self.number:02d}.wav'
+        path=f'../data/{self.type}_{self.number:02d}.wav'
         self.audio_data, self.fs = sf.read(path)
     
     def create_data(self):
