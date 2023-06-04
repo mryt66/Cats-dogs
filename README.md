@@ -9,9 +9,9 @@ Mews and barks are simplified to one sound by us. Example of this one sound can 
 </p>
 
 <p align="center">
-  <img src="https://github.com/mryt66/cats-dogs-classifier/assets/64143856/9847169e-ab30-426d-aacf-7c2f469c9ba3" alt="An example how does classifier prepare data" />
+  <img src="https://github.com/mryt66/cats-dogs-classifier/assets/64143856/9847169e-ab30-426d-aacf-7c2f469c9ba3" />
 </p>
-
+An example how does classifier prepare data
 With 25 different records for each dog and cat our classifier had around 90% accuracy
 
 Data included in cats&dogs .wav, cut and based on:
