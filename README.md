@@ -15,5 +15,5 @@ Data included in cats&dogs .wav, cut and based on:
 https://www.kaggle.com/code/gauravduttakiit/yamnet-audio-cats-and-dogs
 
 <p align="center">
-  <img src="![screen2](https://github.com/mryt66/cats-dogs-classifier/assets/64143856/81e3d9fe-8406-4f06-aee2-d54189bf52b0)" alt="Wykres" />
+  <img src="C:\Users\Marcin\Desktop\screen2.png" alt="Wykres" />
 </p>
