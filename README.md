@@ -1,4 +1,4 @@
-# cats-dogs-classifier
+<h1>Cats and dog classifier</h1>
 cats-dogs-classifier is a program that decides if .wav (sound) file sounds more like a dog or cat.
 csv_creator.py fills data_cats and data_dogs with converted to floats data, every line contains amplitudes of the highest average amplitude of spectrum in each sound.
 Lines doesn't have this same length because of different frequency. (more float numbers in line = bigger frequency)
