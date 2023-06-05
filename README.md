@@ -16,7 +16,8 @@ Mews and barks are simplified to one sound by us. Example of this one sound can 
   An example how does classifier prepare data
 </p>
 
-To know if your .wav file sounds more like a cat or dog, put into src folder file named Your_file.wav
+To know if your .wav file sounds more like a cat or dog, put into src folder file named 'Your_file.wav'.
+
 With 25 different records for each dog and cat our classifier had around 90% accuracy
 
 Data included in cats&dogs .wav, cut and based on:
