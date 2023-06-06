@@ -14,8 +14,10 @@ class DogCat:
         self.path = path
 
     def read_wave(self):
-        path=f'../data/{self.type}_{self.number:02d}.wav'
-        self.audio_data, self.fs = sf.read(path)
+        path2=f'../data/{self.type}_{self.number:02d}.wav'
+        if self.type=='Your_file':
+            path2='Your_file.wav'
+        self.audio_data, self.fs = sf.read(path2)
     
     def create_data(self):
         if self.audio_data is None:
@@ -35,6 +37,7 @@ class DogCat:
         target_amplitudes=np.array([])
         for i in bands[sorted_indices[0]]:
             target_amplitudes=np.append(target_amplitudes,amplitudes[i][0])
-        
         df = pd.DataFrame([target_amplitudes])
-        df.to_csv(self.path, index=False, header=False, mode='a')
+        if self.type=='Your_file':
+            return df
+        df.to_csv(self.path, index=False, header=False, mode='a')  
