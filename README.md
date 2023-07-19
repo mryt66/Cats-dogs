@@ -1,7 +1,7 @@
 <h1>Cats & Dogs</h1>
 Cats & Dogs is a program that decides if .wav (sound) file sounds more like a dog or cat.
 csv_creator.py fills data_cats and data_dogs with converted to floats data, every line contains amplitudes of the highest average amplitude of spectrum in each sound.
-Lines doesn't have this same length because of different frequency. (more float numbers in line = bigger frequency).
+Lines don't have this same length because of different frequency. (more float numbers in line = bigger frequency).
 To make a classifier we used self made KNN.
 Mews and barks are simplified to one sound by us. Example of this one sound can be presented on this graph:
 <p align="center">
