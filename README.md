@@ -18,7 +18,7 @@ Mews and barks are simplified to one sound. Example of this one sound is present
 
 To know if your .wav file sounds more like a cat or dog, put into src folder file named 'Your_file.wav'.
 
-With 98 different records for each dog and cat classifier had around 83% accuracy
+With 98 different records for each dog and cat classifier has approximately 83% accuracy
 
-Data included in cats&dogs .wav, cut and based on:
+Data included in Cats&Dogs .wav, cut and based on:
 https://www.kaggle.com/code/gauravduttakiit/yamnet-audio-cats-and-dogs
